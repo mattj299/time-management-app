@@ -14,7 +14,7 @@ function App() {
   const onThemeChange = () => setTheme(!darkTheme);
 
   return (
-    <Router>
+    <Router basename="/time-management-app">
       <div className="container">
         <div className="no-footer-content">
           <div className="App">
