@@ -1,0 +1,443 @@
+html.theme-light .accent {
+  background: #282828;
+}
+
+html.theme-dark .accent {
+  background: #fff;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+}
+
+@media (min-width: 650px) {
+  .container {
+    max-width: unset;
+  }
+}
+
+.minimize-timeline {
+  min-height: auto !important;
+}
+
+.hide-timeline {
+  height: 0px !important;
+  overflow: hidden;
+}
+
+.minimize-form {
+  margin-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.minimize-form-button,
+.minimize-timeline-preset-buttons,
+.minimize-form-preset {
+  padding: 6px 0 !important;
+}
+
+.hide-form {
+  height: 0px !important;
+  overflow: hidden;
+}
+
+.timeline-extras,
+.form-extras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 10px 0;
+}
+
+.timeline-extra,
+.form-extra {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.timeline-extra:hover,
+.form-extra:hover {
+  color: #000;
+}
+
+.timeline-container {
+  max-width: 325px;
+}
+
+.timeline-form-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  max-width: 325px;
+}
+
+.timeline-form-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timeline-presets-rename-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  font-size: 0.75em;
+}
+
+.timeline-presets-rename-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.timeline-presets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  overflow-x: scroll;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.timeline-preset-content-container {
+  width: 100%;
+}
+
+.timeline-presets::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #282828;
+}
+
+.timeline-presets::-webkit-scrollbar {
+  height: 5px;
+}
+
+.timeline-presets::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #9c27b0;
+}
+
+.timeline-preset-div {
+  min-width: 150px;
+  margin: 0 auto;
+}
+
+.timeline-preset {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  padding: 10px 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timeline-preset-remove-span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 10px;
+}
+
+.timeline-preset-remove-span {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.timeline-preset-remove-span:hover,
+.timeline-presets-rename-close:hover {
+  color: red;
+}
+
+.timeline-preset:hover {
+  background-color: #000;
+}
+
+.preset-active {
+  background-color: #000;
+}
+
+.timeline-presets-name-change-container {
+  position: relative;
+  padding: 10px 0;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timeline-preset-name-change-input:focus {
+  outline: none;
+}
+
+.timeline-preset-name-change-button {
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  font-size: 1.25em;
+  margin-left: 5px;
+}
+
+.timeline-preset-name-change-button:hover {
+  color: #000;
+}
+
+.timeline-form-inputs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-left: -17.5px;
+}
+
+.form-inputs-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.timeline-form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.timeline-form-input {
+  width: 140px;
+  height: 100%;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+.timeline-form-input:focus,
+.timeline-form-input:hover,
+.form-delete:hover {
+  outline: none;
+  background-color: #9c27b0;
+}
+
+.form-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.form-button,
+.timeline-preset-button {
+  background: none;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+  padding: 10px 0px;
+  margin-top: 10px;
+  font-weight: 900;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-button:hover,
+.timeline-preset-button:hover {
+  background: #1976d2;
+}
+
+.timeline-presets-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-extra-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-extra-buttons .form-button {
+  background: none;
+  border: 1px solid #9c27b0;
+  color: #9c27b0;
+}
+
+.form-extra-buttons .form-button:hover {
+  background: #9c27b0;
+}
+
+.form-delete {
+  font-size: 1.35em;
+  padding: 0 5px;
+  cursor: pointer;
+  position: absolute;
+  right: -9%;
+  top: -1px;
+}
+
+.Toastify__toast-container {
+  width: 97vw;
+}
+
+@media (min-width: 481px) {
+  .Toastify__toast-container {
+    width: 350px;
+  }
+}
+
+.css-1sohoek-MuiTimelineItem-root:last-of-type {
+  min-height: auto;
+}
+
+@media (min-width: 650px) {
+  .timeline-and-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .timeline-container,
+  .timeline-form-form-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 350px;
+    min-width: 325px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

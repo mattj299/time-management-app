@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import Navbar from "./components/Navbar/Navbar";
+import TimelineAndForm from "./components//TimelineAndForm/TimelineAndForm";
+import Tips from "./components/Tips/Tips";
+import Footer from "./components/Footer/Footer";
+import "./styles.scss";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  // if true light them, else dark theme
+  const [darkTheme, setTheme] = useState(true);
+
+  const onThemeChange = () => setTheme(!darkTheme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="no-footer-content">
+          <div className="App">
+            <Navbar darkTheme={darkTheme} onThemeChange={onThemeChange} />
+            <div className="no-footer-navbar-content">
+              <Routes>
+                <Route exact path="/" element={<TimelineAndForm />} />
+                <Route path="/tips" element={<Tips />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 

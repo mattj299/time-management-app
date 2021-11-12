@@ -1,0 +1,313 @@
+.timeline-and-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.minimize-timeline {
+  min-height: auto !important;
+}
+
+.minimize-form {
+  margin-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.minimize-form-button,
+.minimize-timeline-preset-buttons,
+.minimize-form-preset {
+  padding: 6px 0 !important;
+}
+
+.timeline-extras,
+.form-extras {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  padding: 10px 0;
+}
+
+.timeline-extra,
+.form-extra {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.timeline-container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-form-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.timeline-form-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.timeline-presets-rename-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.timeline-presets-rename-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.timeline-presets {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  overflow-x: scroll;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.timeline-preset-content-container {
+  width: 100%;
+}
+
+// scroll bar for overflow-x
+
+.timeline-presets::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.timeline-presets::-webkit-scrollbar {
+  height: 5px;
+}
+
+.timeline-presets::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-preset-div {
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+.timeline-preset {
+  transition: background-color 0.25s, color 0.25s;
+  padding: 10px 0px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-preset-remove-span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 10px;
+}
+
+.timeline-preset-remove-span {
+  transition: color 0.25s;
+}
+
+.timeline-preset-remove-span:hover,
+.timeline-presets-rename-close:hover {
+  color: red;
+}
+
+.timeline-presets-name-change-container {
+  position: relative;
+  padding: 10px 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-preset-name-change-input:focus {
+  outline: none;
+}
+
+.timeline-preset-name-change-button {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s, background-color 0.25s;
+  font-size: 1.25em;
+  margin-left: 5px;
+}
+
+.timeline-form-inputs-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-left: -22.5px;
+}
+
+.form-inputs-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+
+.timeline-form-inputs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.timeline-form-input {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+// clock of input
+input[type="time"]::-webkit-calendar-picker-indicator {
+  transition: filter 0.25s;
+  cursor: pointer;
+}
+
+.timeline-form-input:focus,
+.timeline-form-input:hover,
+.form-delete:hover {
+  outline: none;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-button,
+.timeline-preset-button {
+  background: none;
+  padding: 10px 0px;
+  margin-top: 10px;
+  font-weight: 900;
+  transition: background-color 0.25s, color 0.25s;
+  width: 100%;
+  cursor: pointer;
+}
+
+.timeline-presets-buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.form-extra-buttons {
+  display: flex;
+  flex-direction: column;
+
+  .form-button {
+    background: none;
+  }
+}
+
+.form-delete {
+  font-size: 1.35em;
+  padding: 0 5px;
+  cursor: pointer;
+  position: absolute;
+  right: -9%;
+  top: -1px;
+}
+
+// overriding toastify container so when on smaller screen notification can be seen on entire screen
+.Toastify__toast-container {
+  width: 97vw;
+}
+
+@media (min-width: 481px) {
+  .Toastify__toast-container {
+    width: 350px;
+  }
+}
+
+// last item in timeline, changes height so timeline-extras can be closer to timeline so there isn't large whitespace
+.css-1sohoek-MuiTimelineItem-root:last-of-type {
+  min-height: auto;
+}
+
+@media (min-width: 700px) {
+  .timeline-and-form {
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .timeline-container,
+  .timeline-form-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .timeline-container {
+    min-width: 375px;
+  }
+
+  .timeline-form-form-container {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .timeline-container {
+    min-width: 550px;
+  }
+
+  .timeline-form-form-container {
+    max-width: 400px;
+  }
+}
+
+// timeline-content, make font-weight larger so more readable and dominanr
+.timeline-opposite-content,
+.timeline-content {
+  font-weight: 600 !important;
+}
+
+// light blue color of clock #199890

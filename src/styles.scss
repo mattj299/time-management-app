@@ -1,0 +1,283 @@
+// color variables, everything to do with colors exists here. color schemes of light and dark themes
+$darkT-primary: #9c27b0;
+$darkT-secondary: #1976d2;
+$darkT-color: #fff;
+$darkT-bg-color: #282828;
+
+$lightT-primary: #652e6f;
+$lightT-secondary: #154a7e;
+$lightT-color: #000;
+$lightT-bg-color: rgb(200, 200, 200);
+
+$black: #000;
+$white: #fff;
+$yellow: #fff700;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+// change colors of elements according to class that exists above it (theme-dark or theme-light)
+.theme-dark {
+  background-color: $darkT-bg-color;
+  color: $darkT-color;
+
+  .timeline-opposite-content,
+  .faq-route-description {
+    color: #fff700;
+  }
+
+  .navbar {
+    color: $white;
+  }
+
+  .faq-route {
+    color: white;
+  }
+
+  .faq-item-header:hover {
+    background-color: white;
+    color: black;
+  }
+
+  // css for switch
+  .switch {
+    --line: #505162;
+    --dot: #f7f8ff;
+    --circle: #9ea0be;
+    --text: #9ea0be;
+  }
+
+  .timeline-form-input {
+    color: $darkT-color;
+    border-bottom: 1px solid $white;
+  }
+
+  .timeline-presets::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $darkT-primary;
+  }
+
+  .timeline-form-input:focus,
+  .timeline-form-input:hover,
+  .form-delete:hover {
+    outline: none;
+    background-color: $darkT-primary;
+  }
+
+  .form-extra-buttons {
+    .form-button {
+      border: 1px solid $darkT-primary;
+      color: $darkT-primary;
+    }
+
+    .form-button:hover {
+      background: rgba($color: $darkT-primary, $alpha: 1);
+      color: $white;
+    }
+  }
+
+  .timeline-presets::-webkit-scrollbar-track {
+    background-color: $darkT-bg-color;
+  }
+
+  .form-button,
+  .timeline-preset-button {
+    border: 1px solid $darkT-secondary;
+    color: $darkT-secondary;
+  }
+
+  .form-button:hover,
+  .timeline-preset-button:hover {
+    background: rgba($color: $darkT-secondary, $alpha: 1);
+    color: $white;
+  }
+
+  .timeline-preset-name-change-button:hover {
+    color: $black;
+  }
+
+  // color of clock
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+  }
+
+  .timeline-preset-div-tippy {
+    background-color: $lightT-bg-color;
+    color: $black;
+  }
+}
+
+.theme-light {
+  background-color: $lightT-bg-color;
+  color: $lightT-color;
+
+  .faq-route {
+    color: black;
+  }
+
+  .faq-item-header:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .timeline-opposite-content {
+    color: #4b4b4b;
+  }
+
+  .navbar {
+    color: $black;
+  }
+
+  // css for switch
+  .switch {
+    --line: #000000;
+    --dot: #000000;
+    --circle: #9ea0be;
+    --text: #9ea0be;
+  }
+
+  .timeline-form-input {
+    color: $lightT-color;
+    border-bottom: 1px solid $black;
+    font-weight: 600;
+  }
+
+  .timeline-presets::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $lightT-primary;
+  }
+
+  .timeline-form-input:focus,
+  .timeline-form-input:hover,
+  .form-delete:hover {
+    outline: none;
+    background-color: $lightT-primary;
+    color: $white;
+  }
+
+  .form-extra-buttons {
+    .form-button {
+      border: 1px solid $lightT-primary;
+      color: $lightT-primary;
+    }
+
+    .form-button:hover {
+      background: rgba($color: $lightT-primary, $alpha: 1);
+      color: $white;
+    }
+  }
+
+  .timeline-presets::-webkit-scrollbar-track {
+    background-color: $lightT-bg-color;
+  }
+
+  .form-button,
+  .timeline-preset-button {
+    border: 1px solid $lightT-secondary;
+    color: $lightT-secondary;
+  }
+
+  .form-button:hover,
+  .timeline-preset-button:hover {
+    background: rgba($color: $lightT-secondary, $alpha: 1);
+    color: $white;
+  }
+
+  .timeline-preset-name-change-button:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  // color of clock
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: brightness(0);
+    cursor: pointer;
+  }
+
+  .timeline-extras,
+  .form-extras {
+    font-weight: 700;
+  }
+
+  // connectors
+  .css-1ami7lv-MuiTimelineConnector-root {
+    background-color: $darkT-bg-color;
+  }
+
+  .timeline-preset-div-tippy {
+    background-color: $darkT-bg-color;
+    color: $white;
+  }
+}
+
+// colors and classes that correspond with both themes
+.timeline-extra:hover,
+.form-extra:hover {
+  color: $black;
+}
+
+.timeline-preset:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.preset-active {
+  background-color: $black;
+  color: $white;
+}
+
+// general scss
+.container {
+  max-width: 100%;
+  margin: auto 15px;
+}
+
+@media (min-width: 650px) {
+  .container {
+    max-width: unset;
+    margin: auto;
+  }
+}
+
+// Footer
+.no-footer-content {
+  min-height: calc(100vh - 50px);
+}
+
+.no-footer-navbar-content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20px;
+}
+
+@media (min-width: 700px) {
+  .no-footer-navbar-content {
+    max-width: 700px;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .no-footer-navbar-content {
+    max-width: 1000px;
+  }
+}
